@@ -1,0 +1,74 @@
+For this project, I have created a simple tic tac toe game using HTML5, CSS, and JavaScript. 
+
+For starters, I've wrote out the usual layout for html including text that creates the 9x9
+board for the game including displaying the winner of the game and a button that allows the 
+player to reset the game after it is over. 
+
+Then after that, I have wrote a css file that will not only diplay the cells created in the 
+html document, but also the way it appears on the webpage ranging from the colors, the layout
+etc..
+
+After writing out the html and css, I have started coding the functionalites of the game by 
+writing it out in JavaScript. At the start of the program, I've created three variables 
+representing teh original board, the human player, and the AI. Then after that, I have 
+written an array representing the winning combinations and a variable that will store a cell 
+reference from the html file, and the querySelectorAll will select all the references. 
+
+Then after I did that, I have created a function representing the start fo the game, then
+wrote a line of code where we select the endgame elemnet, and set the display property to 
+"none" as shown in the css file. 
+
+After doing the endgame element, I then wrote another line of code that sets every array 
+going from 0 to 9, then a for loop that goes through each cell of the board. Then within 
+that for loop, I wrote a line of code that represents each item in the cells as the for 
+loop goes through them, and make nothing appear in the cell. Then when someone wins, the 
+cells that are part fo the winning combination will be high lighted and when the player 
+restarts the game, then we will have no background color. Then I have finished off that 
+nested for loop to where the click function will be called, when the user clicks on one 
+of the cells of the board. 
+
+After completing the contents of the funcion that starts the game, I then created another
+function that passes in a square. Within the nest of the turn click function, I have 
+written two if statements to where if the id number is equal to the 'number', then neither 
+human or ai have played in that cell, and if there is not a tie, then the player will take
+a turn. 
+
+Then I have defined the turn function that takes in two parameteres representing the square
+ID and the player, and within the nest of that function, I have written code that sets the 
+board array at teh id that we clicked to player, update the display so we will se where we
+clicked and set the innerText to equal player, check if the game has been won when a turn 
+is taken, and if the game is won, then a message will display letting the player know that 
+the game has won. 
+
+Then I have declared a function that checks the win by receiving the board and the player, 
+and within that function I've written lines of code that uses the reduce method that will 
+go through every element of the board array and give back one single value. The accumulator
+'a' is what will give back the value at the end, and initialize it to an empty arry. The 
+'e' is the element of the board array that we are going through, adn the 'i' is the index.
+Therefore, if the element (aka 'e') is the same as the player, then we are going to concat 
+'i' meaning we are going to take the accumulator array (aka the [] at the end) and add the 
+index 'i' to the array. Otherwise, if the element (aka 'e') does not equal the player, then 
+we are going to return the accumulator (aka 'a') as it was meaning we are not add anything 
+to the accumulator. Then, I have written a line of code afterwards that sets the game won 
+to null, if no one wins, and then wrote a for of loop that checks if the game has been won. 
+Then within the nested for loop, I have written an if statement that declares the player as
+the winner and break afterwards. After finishing up the contents of the for loop, I then 
+finished up the contents of the check win function by returning the game won. 
+
+After finishing the check win function, I then wrote another function that defines the 
+"Game Over" that accepts gameWon, and within it, I have written two for loops that high 
+lights all the squares for the winner and goes through every cell to make sure the user can 
+not click on the cell anymore after it has been selected by the player. After finishing up 
+the for loops, I have written a ternary operator that inside the function that declares the
+winner by displaying the message notifying the player if they have won or lost. 
+
+After I did that, I have defined three more functions that declares the winner, defines the 
+empty squares, and finds the best spot for the ai player to play, and then after writing out
+the contents for them, I then defined another function that checks if there is a draw. Within
+the draw function, I have written an if statement to where every cell is filled up with no
+victor, and within it, I have writen a for loop that highlights every cell green where there 
+is a tie otherwise, it will return false. 
+
+Afterwards, I defined a function that creates a minimax algorithm, which will make the tic 
+tac toe game more challenging to play with a series of if then else statements, and many more
+that can be explained in the comments of my JavaScript file. 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ward's Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="ttt.JPG" />
+
+    <!-- Gives the webpage a background color.-->
+    <style>
+    body {
+    background-color: lightgreen;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!--Creates the 9x9 board for the tic tac toe game.-->
+    <table>
+        <tr>
+            <td class="cell" id="0"></td> <!--Top left cell.-->
+            <td class="cell" id="1"></td> <!--Top middle cell.-->
+            <td class="cell" id="2"></td> <!--Top right cell.-->
+        </tr>
+
+         <tr>
+            <td class="cell" id="3"></td> <!--Middle left cell.-->
+            <td class="cell" id="4"></td> <!--Middle middle cell.-->
+            <td class="cell" id="5"></td> <!--Middle right cell.-->
+        </tr>
+
+         <tr>
+            <td class="cell" id="6"></td> <!--Bottom left cell.-->
+            <td class="cell" id="7"></td> <!--Bottom middle cell.-->
+            <td class="cell" id="8"></td> <!--Bottom right cell.-->
+        </tr>
+    </table>
+
+    <!--Displays the winner of the game.-->
+    <div class="endgame">
+        <div class="text"></div>
+
+        <!--Button that allows the user to reset the game after it ends.-->
+        <button onClick="startGame()">Play again!</button>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
